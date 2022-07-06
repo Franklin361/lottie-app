@@ -22,6 +22,7 @@ input[type="radio"] {
   min-height: 100vh;
   display: flex;
   gap: 3rem;
+  padding: 0 2rem;
 }
 
 .container-opt {
@@ -44,8 +45,8 @@ input[type="radio"] {
 
 .container-player {
   
-  width: 500px;
-  height: 500px;
+  width: 470px;
+  height: 470px;
   margin: auto;
 }
 
