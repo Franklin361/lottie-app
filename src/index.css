@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&display=swap');
+@import url('./switch.css');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(6, 0, 12);
+  color: #f2f2f2;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  display: none;
+}
+
+.container-app {
+  min-height: 100vh;
+  display: flex;
+  gap: 3rem;
+}
+
+.container-opt {
+  overflow-y: scroll;
+  height: 100vh;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2rem 0;
+}
+
+.container-opt::-webkit-scrollbar {
+  width: 0;
+}
+
+.container-opt {
+  scrollbar-width: none;
+}
+
+.container-player {
+  
+  width: 500px;
+  height: 500px;
+  margin: auto;
+}
+
+.container-opt .item-opt {
+  background-color: slateblue;
+  padding: 15px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.container-opt .item-opt .title-opt {
+  font-weight: bold;
+  font-size: 1.3rem;
+
+}
+
+.container-opt .item-opt .container-inputs {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  
+  align-items: center;
+  flex-wrap: wrap;
+}
+.w-100{
+  width: 100%;
+}
+
+.container-opt .item-opt .container-inputs .control {
+  text-align: center;
+}
+
+.item-opt .container-inputs .control>label {
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  font-size: 1.1rem;
+  padding: 1rem;
+  border-radius: 5px;
+  transition: .2s linear;
+}
+
+input[type="checkbox"]~label:hover,
+input[type="radio"]~label:hover {
+  background-color: rgb(66, 61, 102);
+}
+
+.item-opt .container-inputs .control>label::selection {
+  background: transparent;
+}
+
+input[type="checkbox"]:checked~label,
+input[type="radio"]:checked~label {
+  background-color: black;
+}
+
+input[type="checkbox"]:checked~label:hover,
+input[type="radio"]:checked~label:hover {
+  background: black;
+}
+
+input[type="number"] {
+  font-size: 1.1rem;
+  padding: 5px;
+  font-weight: bold;
+}
+
+.control-btns {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.control-btns .btn {
+  font-size: 1.1rem;
+  padding: 10px;
+  width: 100px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 1px solid black;
+  background-color: rgb(238, 17, 139);
+  color: white;
+  font-weight: bold;
+}
+
+.control-btns .btn:hover {
+  transform: scale(.99);
+  background-color: rgb(204, 11, 140);
+}
+
+.control-btns .btn:active {
+  transform: scale(1);
+  background-color: rgb(238, 17, 139);
+}
+
+@media screen and (max-width: 800px) {
+  .container-app {
+    min-height: auto;
+    flex-direction: column;
+  }
+
+  .container-opt {
+    padding: 2rem;
+    margin-top: 2rem;
+  }
+
+}
+
+
+@media screen and (max-width: 500px) {
+  .container-player {
+    width: 90%;
+    height: auto;
+  }
+  .container-opt {
+    padding: 0rem;
+    margin-top: 0rem;
+  }
+}
